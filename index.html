@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="center">
+  <main class="game">
+    <div id="menu">
+      <h2>Jogadores</h2>
+      <div id="players">
+        <label for="player1">
+          <div id="player-1" class="img-players"> </div>
+          <input placeholder="Apelido jogador 2" type="text" maxlength="15" id="player1" name="player-1">
+        </label>
+        <div id="img-play">
+
+        </div>
+        <label for="player2">
+          <div id="player-2" class="img-players"></div>
+          <input placeholder="Apelido jogador 2" type="text" maxlength="15" id="player2" name="player-2">
+        </label>
+
+      </div>
+      <span class="info-game">Insira o nome dos jadores para iniciar a partida</span>
+    </div>
+  </main>
+  
+
+  <div class="game" id="game-player" style="display: none;">
+    <div class="area-game center">
+        <label>
+          <div id="player-1" class="img-players"> </div>
+          <span id="name-jogador1"></span>
+        </label>
+        
+          <table id="table-game">
+              <tr class="line-game">
+                <td class="move" style="border-bottom:1px solid red;border-right: 1px solid red;" id="a-1"></td>
+                <td class="move" style="border-bottom:1px solid red" id="a-2"></td>
+                <td class="move" style="border-bottom:1px solid red;border-left: 1px solid red;" id="a-3"></td>
+              </tr>
+              <tr class="line-game">
+                <td class="move" style="border-right: 1px solid red;" id="b-1"></td>
+                <td class="move" id="b-2"></td>
+                <td class="move" style="border-left: 1px solid red;" id="b-3"></td>
+              </tr>
+              <tr class="line-game">
+                <td class="move" style="border-top:1px solid red;border-right: 1px solid red;" id="c-1"></td>
+                <td class="move" style="border-top:1px solid red" id="c-2"></td>
+                <td class="move" style="border-top:1px solid red;border-left: 1px solid red;" id="c-3"></td>
+              </tr>
+          </table>
+          <label>
+            <div id="player-2" class="img-players"> </div>
+            <span id="name-jogador2"></span>
+          </label>
+   
+  </div>
+  
+  <script src="jquery.js"></script>
+  <script src="jogo.js"></script>
+</body>
+
+</html>

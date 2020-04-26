@@ -1,0 +1,134 @@
+*{
+  margin:0px;
+  padding: 0px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 200;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to left, rgb(40, 140, 165),rgb(49, 132, 153)) ;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.game{
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  align-self: center;
+}
+
+.info-game{
+  font-size: 18px;
+  color:rgb(139, 136, 136);
+  font-weight: 400;
+}
+
+#menu{
+  text-align: center;
+  font-size: 25px;
+  width: 100%;
+  padding: 2%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius:10px ;
+  
+}
+
+.area-game{
+  text-align: center;
+  font-size: 25px;
+  width: 600px;
+  padding: 2%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius:10px ;
+  transition: .5s;
+}
+
+#table-game{
+  width: 80%;
+  border-radius: 5px;
+  margin:50px
+}
+
+
+.line-game{
+  background-color:#fff;
+  border-radius: 5px;
+}
+
+.line-game td{
+  height: 45px;
+  width: 100px;
+  padding:30px;
+}
+
+.area-game .img-players{
+  width: 80px;
+  height: 80px;
+}
+
+#menu h2{
+  color:rgb(92, 92, 92);
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#players{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#players label{
+  margin:60px;
+}
+#img-play{
+  background-image: url('img/iniciar.png');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#img-play:hover{
+  transition: 0.2s;
+  box-shadow: 2px 2px 10px rgb(40, 165, 98) ;
+}
+
+.img-players{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  margin-top:30px;
+}
+
+#player-1{
+  background-image: url('img/jogador_1.png');
+}
+
+#player-2{
+  background-image: url('img/jogador_2.png');
+}
+
+input{
+  border: none;
+  border-bottom:1px solid;
+  outline: 0;
+  font-size: 15px;
+  width: 150px;
+}
+

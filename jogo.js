@@ -1,17 +1,23 @@
 
 $(document).ready(function () {
-  var rodada = 1;
-  var matrizJogo = new Array('a', 'b', 'c');
-  matrizJogo['a'] = new Array(3)
-  matrizJogo['b'] = new Array(3)
-  matrizJogo['c'] = new Array(3)
+  var rodada =1;
+  var matrizJogo;
 
-  for (linha of matrizJogo) {
-    matrizJogo[linha][1] = 0;
-    matrizJogo[linha][2] = 0;
-    matrizJogo[linha][3] = 0;
+  inicializarJogo();
+
+  function inicializarJogo(){
+    rodada = 1;
+    matrizJogo = new Array('a', 'b', 'c');
+    matrizJogo['a'] = new Array(3)
+    matrizJogo['b'] = new Array(3)
+    matrizJogo['c'] = new Array(3)
+  
+    for (linha of matrizJogo) {
+      matrizJogo[linha][1] = 0;
+      matrizJogo[linha][2] = 0;
+      matrizJogo[linha][3] = 0;
+    }
   }
-
 
   $("#img-play").on('click',function () {
     if ($('#player1').val() === "") { alert('Apelido do jogador 1 não foi preenchido'); return false }
@@ -25,22 +31,34 @@ $(document).ready(function () {
 
     }
   })
+  
   $('#jogarNovamente').click(function(){
-    let player1 = $('#player1').val();
-    let player2 = $('#player2').val();
     location.reload();
-    console.log(player1)
-    $('#player1').val(player1);
-    $('#player2').val(player2);
-    $("#img-play").trigger("click")
+   
   })
 
-  $('.move').click(function () {
+  $('#reiniciar').click(function(){
+    inicializarJogo();
+    var coluna=1;
+    for(let linha of matrizJogo){
+        while(coluna<=3){
+          $('#'+linha+'-'+coluna).css('background-image','');
+          $('#'+linha+'-'+coluna).on('click',move)
+          coluna++;
+        }
+        coluna=0;
+    }
+   
+
+  })
+  $('.move').click(move)
+
+ function move () {
     var idCampoClicado = this.id
-    $('#'+idCampoClicado).off();
+    $('#'+idCampoClicado).off('click')
     jogada(idCampoClicado);
 
-  })
+  }
   function jogada(id) {
     var icone = '';
     var ponto = 0;

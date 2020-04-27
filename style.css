@@ -140,21 +140,26 @@ input{
   justify-content: center;
 
 }
-.game-footer{
+.btn{
   padding:10px;
-  border:1px solid #fff;
-  color:#fff;
-  border-radius:20px;
-  text-align: center;
-  cursor: pointer;
   transition: .3s;
   font-size:18px;
   font-weight: 200;
   margin-top:2%;
+  margin-left: 1%;
   width: 200px;
+  border-radius:10px;
+  text-align: center;
+  cursor: pointer;
+}
+.jogar-novamente{
+
+  border:1px solid #fff;
+  color:#fff;
 
 }
-.game-footer:hover{
+
+.jogar-novamente:hover{
 
   background-color: #fff;
   transform-origin: right;
@@ -162,3 +167,18 @@ input{
   color:rgb(33, 102, 119);
   transition: .5s;
 }
+
+.reiniciar{
+  border:1px solid #bd2130;
+  color:rgb(255, 255, 255);
+  background-color: #bd2130;
+  transition: .3s;
+}
+.reiniciar:hover{
+  border:1px solid rgb(255, 255, 255);
+  background-color: #fff;
+  color:#bd2130;
+  transition: .5s;
+
+}
+

@@ -13,20 +13,26 @@ $(document).ready(function () {
   }
 
 
-  $("#img-play").click(function () {
-
+  $("#img-play").on('click',function () {
     if ($('#player1').val() === "") { alert('Apelido do jogador 1 não foi preenchido'); return false }
-
     else if ($('#player2').val() === "") { alert('Apelido do jogador 2 não foi preenchido'); return false }
-
     else {
       $('#menu').css('display', 'none')
-      $('#game-player').fadeIn('slow')
+      $('#cenario-play').fadeIn('slow')
 
       $("#name-jogador1").text($('#player1').val());
       $("#name-jogador2").text($('#player2').val());
 
     }
+  })
+  $('#jogarNovamente').click(function(){
+    let player1 = $('#player1').val();
+    let player2 = $('#player2').val();
+    location.reload();
+    console.log(player1)
+    $('#player1').val(player1);
+    $('#player2').val(player2);
+    $("#img-play").trigger("click")
   })
 
   $('.move').click(function () {
@@ -35,7 +41,6 @@ $(document).ready(function () {
     jogada(idCampoClicado);
 
   })
-
   function jogada(id) {
     var icone = '';
     var ponto = 0;
